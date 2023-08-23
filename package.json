@@ -20,9 +20,9 @@
   },
   "homepage": "https://github.com/WilberC/blog.wilberc.io#readme",
   "devDependencies": {
+    "oh-vue-icons": "^1.0.0-rc3",
     "rimraf": "^5.0.1",
     "vuepress": "^2.0.0-beta.49",
-    "vuepress-theme-gungnir": "^2.0.0-alpha.26",
-    "oh-vue-icons": "^1.0.0-rc3"
+    "vuepress-theme-gungnir": "^2.0.0-alpha.26"
   }
 }
