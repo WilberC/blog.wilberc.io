@@ -1,7 +1,7 @@
 <template>
   <Common>
     <template #page>
-      <PageHeader :page-info="pageInfo" />
+      <PageHeader :page-info="pageInfo"/>
 
       <div class="links-wrapper">
         <div
@@ -19,7 +19,7 @@
             >
               <div class="content">
                 <a :href="item.url" target="_blank" rel="noopener noreferrer">
-                  <img :src="$withBase(item.img)" />
+                  <img :src="$withBase(item.img)"/>
                   <span class="sitename">
                     {{ item.sitename }}
                   </span>
@@ -40,23 +40,23 @@
 import Common from "@theme/Common.vue";
 import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
-import { computed } from "vue";
 import type {
   GungnirThemeLinksPageFrontmatter,
   GungnirThemePageOptions
-} from "@shared";
-import { useThemeLocaleData} from "vuepress-theme-gungnir/lib/client";
+} from "vuepress-theme-gungnir/lib/shared"
+import { useThemeLocaleData } from "vuepress-theme-gungnir/lib/client";
+import { computed } from "vue";
 
 const themeLocale = useThemeLocaleData();
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
 const pageInfo = computed(() => {
   const info = (
-      themeLocale.value.pages && themeLocale.value.pages.homepage
-          ? themeLocale.value.pages.homepage
+      themeLocale.value.pages && themeLocale.value.pages.aboutMe
+          ? themeLocale.value.pages.aboutMe
           : {}
   ) as GungnirThemePageOptions;
   if (info.title === undefined)
-    info.title = themeLocale.value.pageText?.homepage;
+    info.title = themeLocale.value.pageText?.aboutMe;
   return info;
 });
 </script>

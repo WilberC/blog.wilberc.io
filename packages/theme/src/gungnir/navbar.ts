@@ -1,5 +1,3 @@
-import {CoExternalLink} from "oh-vue-icons/icons";
-
 export const navbar = [
   {
     text: "Home",
