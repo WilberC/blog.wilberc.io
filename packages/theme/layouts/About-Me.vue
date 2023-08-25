@@ -40,16 +40,28 @@
 import Common from "@theme/Common.vue";
 import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
+// -----------------------
 import type {
   GungnirThemeLinksPageFrontmatter,
-  GungnirThemePageOptions
+  // GungnirThemePageOptions
 } from "vuepress-theme-gungnir/lib/shared"
-import { useThemeLocaleData } from "vuepress-theme-gungnir/lib/client";
+// import { useThemeLocaleData } from "vuepress-theme-gungnir/lib/client";
+// -----------------------
+// import type {
+//   GungnirThemePagesOptionsWithCustomPages
+// } from "../src/extended-theme/customPages";
+import { useThemeLocaleDataExtended } from "../src/extended-theme";
+// -----------------------
 import { computed } from "vue";
+import { GungnirThemePageOptions } from "vuepress-theme-gungnir";
 
-const themeLocale = useThemeLocaleData();
+const themeLocale = useThemeLocaleDataExtended();
+// const themeLocale = useThemeLocaleData();
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
 const pageInfo = computed(() => {
+  console.log(themeLocale)
+  console.log(themeLocale.value)
+  console.log(themeLocale.value.pages)
   const info = (
       themeLocale.value.pages && themeLocale.value.pages.aboutMe
           ? themeLocale.value.pages.aboutMe
@@ -60,3 +72,4 @@ const pageInfo = computed(() => {
   return info;
 });
 </script>
+<!--GungnirThemeI18n-->

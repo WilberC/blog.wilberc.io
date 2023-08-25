@@ -6,8 +6,6 @@ const COMPONENTS_DIR: string = path.resolve(PACKAGE_DIR, "../client/components")
 const BASE_LAYOUTS_DIR: string = path.resolve(PACKAGE_DIR, "../client/layouts");
 // Due to personal blog purpose it will be static, but EXTENDED_LAYOUTS_DIR should be configurable
 const EXTENDED_LAYOUTS_DIR: string = path.resolve(__dirname, "../../layouts");
-const USE_THEME_DATA_PATH: string = path.resolve(PACKAGE_DIR, "../client/composables/index.js");
-const SHARED_PATH: string = path.resolve(PACKAGE_DIR, "../shared/index.js");
 export const TEMPLATE_BUILD: string = path.resolve(PACKAGE_DIR, "../../templates/index.build.html");
 export const CLIENT_CONFIG_FILE: string = path.resolve(PACKAGE_DIR, "../client/config.js");
 
@@ -46,6 +44,4 @@ export const getAliasPaths = () => ({
   ...getAliasRecordFrom(COMPONENTS_DIR),
   ...getAliasRecordFrom(BASE_LAYOUTS_DIR),
   ...getAliasRecordFrom(EXTENDED_LAYOUTS_DIR),
-  "@composables": USE_THEME_DATA_PATH,
-  "@shared": SHARED_PATH
 })
