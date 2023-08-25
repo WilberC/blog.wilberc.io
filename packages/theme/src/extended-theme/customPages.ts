@@ -5,5 +5,5 @@ import type {
 export interface GungnirThemePagesOptionsWithCustomPages {
   tags?: GungnirThemePageOptions;
   links?: GungnirThemePageOptions;
-  testPage?: GungnirThemePageOptions;
+  "aboutMe"?: GungnirThemePageOptions;
 }

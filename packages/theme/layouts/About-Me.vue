@@ -44,18 +44,19 @@ import { computed } from "vue";
 import type {
   GungnirThemeLinksPageFrontmatter,
   GungnirThemePageOptions
-} from "../../shared";
-// import { useThemeLocaleData } from "../composables";
-// const themeLocale = useThemeLocaleData();
+} from "@shared";
+import { useThemeLocaleData} from "vuepress-theme-gungnir/lib/client";
+
+const themeLocale = useThemeLocaleData();
 const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
-// const pageInfo = computed(() => {
-//   const info = (
-//       themeLocale.value.pages && themeLocale.value.pages.testPage
-//           ? themeLocale.value.pages.testPage
-//           : {}
-//   ) as GungnirThemePageOptions;
-//   if (info.title === undefined)
-//     info.title = themeLocale.value.pageText?.testPage;
-//   return info;
-// });
+const pageInfo = computed(() => {
+  const info = (
+      themeLocale.value.pages && themeLocale.value.pages.homepage
+          ? themeLocale.value.pages.homepage
+          : {}
+  ) as GungnirThemePageOptions;
+  if (info.title === undefined)
+    info.title = themeLocale.value.pageText?.homepage;
+  return info;
+});
 </script>
