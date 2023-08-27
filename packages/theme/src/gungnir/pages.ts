@@ -17,7 +17,7 @@ export const pages = {
     subtitle: "Unveiling the Developer Behind the Screen: Exploring My Journey, Skills, and Experience",
     bgImage: {
       path: "/img/pages/about.jpg",
-      // mask: "rgba(137, 29, 85, 0.3)"
+      mask: "rgba(125, 139, 113, 0.4)"
     }
   }
 }

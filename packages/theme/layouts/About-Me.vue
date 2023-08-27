@@ -1,54 +1,70 @@
 <template>
   <Common>
     <template #page>
-      <PageHeader :page-info="pageInfo"/>
+      <section class="about-me__wrapper">
 
-      <div class="links-wrapper">
-        <div
-            v-for="(group, groupId) in frontmatter.links"
-            :key="`link-group-${groupId}`"
-            class="link-section"
-        >
-          <h1>TEST PAGE -- Static header</h1>
-          <h2>{{ group.title }}</h2>
-          <div class="link-group">
-            <div
-                v-for="(item, itemId) in group.items"
-                :key="`link-${itemId}`"
-                class="link-item"
-            >
-              <div class="content">
-                <a :href="item.url" target="_blank" rel="noopener noreferrer">
-                  <img :src="$withBase(item.img)"/>
-                  <span class="sitename">
-                    {{ item.sitename }}
-                  </span>
-                  <div class="desc">
-                    {{ item.desc }}
-                  </div>
-                </a>
-              </div>
-            </div>
+        <h1 class="about-me__title">{{ frontmatter.title }}</h1>
+        <SNS large/>
+        <div class="about-me__description">
+          <img :src="$withBase(frontmatter.image)" alt="me"/>
+          <div class="about-me__description__text">
+            <p>{{ frontmatter.description }}</p>
           </div>
         </div>
-      </div>
+
+        <a v-if="frontmatter.cvLink"
+           :href="frontmatter.cvLink"
+           style="display:block; margin-top: 20px;"
+           target="_blank">Curriculum Vitae</a>
+
+        <h2>Experience</h2>
+        <div
+            v-for="(experienceItem, experienceId) in frontmatter.experience"
+            :key="`experience-group-${experienceId}`"
+            class="top-line-wrapper"
+        >
+          <div class="line-content">
+            <p>
+            <span>
+              <b>{{ experienceItem.name }}</b><span v-if="experienceItem.company" style="display: inline;">, </span>
+              <a v-if="experienceItem.company"
+                 :href="experienceItem.company.url"
+                 target="_blank">{{ experienceItem.company.placeName }}</a>
+            </span>
+              <span>{{ experienceItem.year }}</span>
+            </p>
+            <span v-if="experienceItem.extras" class="line-content__description">{{ experienceItem.extras }}</span>
+          </div>
+        </div>
+
+        <h2>Miscellaneous</h2>
+        <ul>
+          <li v-for="(miscellaneousItem, miscellaneousId) in frontmatter.miscellaneous"
+              :key="`experience-group-${miscellaneousId}`"
+          >
+            {{ miscellaneousItem.desc }}
+          </li>
+        </ul>
+      </section>
     </template>
   </Common>
 </template>
 
+<style lang="scss">
+@import "../src/extended-theme/custom-pages/aboutMe.scss";
+</style>
+
 <script setup lang="ts">
 import { computed } from "vue";
 import Common from "@theme/Common.vue";
-import PageHeader from "@theme/PageHeader.vue";
 import { usePageFrontmatter } from "@vuepress/client";
-import type {
-  GungnirThemeLinksPageFrontmatter,
-  GungnirThemePageOptions
-} from "vuepress-theme-gungnir/lib/shared"
+import type { GungnirThemePageOptions } from "vuepress-theme-gungnir/lib/shared"
 import { useThemeLocaleData } from "../src/extended-theme/themeLocalData";
+import { GungnirThemeAboutMePageFrontmatter } from "../src/extended-theme/custom-pages/aboutMe";
+import SNS from "@theme/SNS.vue";
 
 const themeLocale = useThemeLocaleData();
-const frontmatter = usePageFrontmatter<GungnirThemeLinksPageFrontmatter>();
+const frontmatter = usePageFrontmatter<GungnirThemeAboutMePageFrontmatter>();
 const pageInfo = computed(() => {
   const info = (
       themeLocale.value.pages && themeLocale.value.pages.aboutMe
