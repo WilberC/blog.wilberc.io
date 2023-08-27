@@ -10,8 +10,13 @@ export const navbar = [
     icon: "fa-tag"
   },
   {
-    text: "Test page",
-    link: "/testpage/",
-    icon: "fa-tag"
+    text: "Links",
+    link: "/links/",
+    icon: "co-external-link"
+  },
+  {
+    text: "About me",
+    link: "/about-me/",
+    icon: "fa-user"
   }
 ]

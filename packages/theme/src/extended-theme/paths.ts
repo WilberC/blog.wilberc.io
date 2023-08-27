@@ -43,5 +43,5 @@ const getAliasRecordFrom = (dir: string) => Object.fromEntries(
 export const getAliasPaths = () => ({
   ...getAliasRecordFrom(COMPONENTS_DIR),
   ...getAliasRecordFrom(BASE_LAYOUTS_DIR),
-  ...getAliasRecordFrom(EXTENDED_LAYOUTS_DIR)
+  ...getAliasRecordFrom(EXTENDED_LAYOUTS_DIR),
 })
