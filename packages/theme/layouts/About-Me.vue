@@ -12,7 +12,8 @@
           </div>
         </div>
 
-        <a v-if="frontmatter.cvLink"
+        <a
+v-if="frontmatter.cvLink"
            :href="frontmatter.cvLink"
            style="display:block; margin-top: 20px;"
            target="_blank">Curriculum Vitae</a>
@@ -27,7 +28,8 @@
             <p>
             <span>
               <b>{{ experienceItem.name }}</b><span v-if="experienceItem.company" style="display: inline;">, </span>
-              <a v-if="experienceItem.company"
+              <a
+v-if="experienceItem.company"
                  :href="experienceItem.company.url"
                  target="_blank">{{ experienceItem.company.placeName }}</a>
             </span>
@@ -39,7 +41,8 @@
 
         <h2>Miscellaneous</h2>
         <ul>
-          <li v-for="(miscellaneousItem, miscellaneousId) in frontmatter.miscellaneous"
+          <li
+v-for="(miscellaneousItem, miscellaneousId) in frontmatter.miscellaneous"
               :key="`experience-group-${miscellaneousId}`"
           >
             {{ miscellaneousItem.desc }}
@@ -49,10 +52,6 @@
     </template>
   </Common>
 </template>
-
-<style lang="scss">
-@import "../src/extended-theme/custom-pages/aboutMe.scss";
-</style>
 
 <script setup lang="ts">
 import { computed } from "vue";
@@ -65,6 +64,7 @@ import SNS from "@theme/SNS.vue";
 
 const themeLocale = useThemeLocaleData();
 const frontmatter = usePageFrontmatter<GungnirThemeAboutMePageFrontmatter>();
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const pageInfo = computed(() => {
   const info = (
       themeLocale.value.pages && themeLocale.value.pages.aboutMe
@@ -76,3 +76,7 @@ const pageInfo = computed(() => {
   return info;
 });
 </script>
+
+<style lang="scss">
+@import "../src/extended-theme/custom-pages/aboutMe.scss";
+</style>
