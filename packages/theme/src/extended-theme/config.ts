@@ -8,6 +8,7 @@ import { CLIENT_CONFIG_FILE, TEMPLATE_BUILD, getAliasPaths, getLayoutsPaths } fr
 export const gungnirThemeExtended = (
   {themePlugins = {}, ...localeOptions}: GungnirThemeOptionsWithCustomPages = {}
 ): Theme =>
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   (app) => {
     assignDefaultLocaleOptions(localeOptions);
     localeOptions.search = !(themePlugins.search === false);
@@ -17,10 +18,12 @@ export const gungnirThemeExtended = (
       templateBuild: TEMPLATE_BUILD,
       alias: getAliasPaths(),
       clientConfigFile: CLIENT_CONFIG_FILE,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       extendsBundlerOptions: (config: any, app): void => {
         const {bundler} = app.options;
         if (bundler.name.endsWith("vite")) {
           const bundlerConfig = config as ViteBundlerOptions;
+          // eslint-disable-next-line @typescript-eslint/no-var-requires
           bundlerConfig.viteOptions = require("vite").mergeConfig(
             bundlerConfig.viteOptions as Record<string, unknown>,
             {
