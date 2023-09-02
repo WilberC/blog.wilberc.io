@@ -17,6 +17,7 @@ interface MiscellaneousItem {
 export interface GungnirThemeAboutMePageFrontmatter
   extends GungnirThemePageFrontmatter {
   title: string;
+  me: string;
   description: string;
   cvLink?: string;
   image?: string

@@ -3,7 +3,7 @@
     <template #page>
       <section class="about-me__wrapper">
 
-        <h1 class="about-me__title">{{ frontmatter.title }}</h1>
+        <h1 class="about-me__title">{{ frontmatter.me }}</h1>
         <SNS large/>
         <div class="about-me__description">
           <img :src="$withBase(frontmatter.image)" alt="me"/>
@@ -13,10 +13,12 @@
         </div>
 
         <a
-v-if="frontmatter.cvLink"
-           :href="frontmatter.cvLink"
-           style="display:block; margin-top: 20px;"
-           target="_blank">Curriculum Vitae</a>
+            v-if="frontmatter.cvLink"
+            :href="frontmatter.cvLink"
+            style="display:block; margin-top: 20px;"
+            target="_blank">
+          Curriculum Vitae
+        </a>
 
         <h2>Experience</h2>
         <div
@@ -29,9 +31,11 @@ v-if="frontmatter.cvLink"
             <span>
               <b>{{ experienceItem.name }}</b><span v-if="experienceItem.company" style="display: inline;">, </span>
               <a
-v-if="experienceItem.company"
-                 :href="experienceItem.company.url"
-                 target="_blank">{{ experienceItem.company.placeName }}</a>
+                  v-if="experienceItem.company"
+                  :href="experienceItem.company.url"
+                  target="_blank">
+                {{ experienceItem.company.placeName }}
+              </a>
             </span>
               <span>{{ experienceItem.year }}</span>
             </p>
@@ -42,9 +46,8 @@ v-if="experienceItem.company"
         <h2>Miscellaneous</h2>
         <ul>
           <li
-v-for="(miscellaneousItem, miscellaneousId) in frontmatter.miscellaneous"
-              :key="`experience-group-${miscellaneousId}`"
-          >
+              v-for="(miscellaneousItem, miscellaneousId) in frontmatter.miscellaneous"
+              :key="`experience-group-${miscellaneousId}`">
             {{ miscellaneousItem.desc }}
           </li>
         </ul>
@@ -54,12 +57,12 @@ v-for="(miscellaneousItem, miscellaneousId) in frontmatter.miscellaneous"
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import {computed} from "vue";
 import Common from "@theme/Common.vue";
-import { usePageFrontmatter } from "@vuepress/client";
-import type { GungnirThemePageOptions } from "vuepress-theme-gungnir/lib/shared"
-import { useThemeLocaleData } from "../src/extended-theme/themeLocalData";
-import { GungnirThemeAboutMePageFrontmatter } from "../src/extended-theme/custom-pages/aboutMe";
+import {usePageFrontmatter} from "@vuepress/client";
+import type {GungnirThemePageOptions} from "vuepress-theme-gungnir/lib/shared"
+import {useThemeLocaleData} from "../src/extended-theme/themeLocalData";
+import {GungnirThemeAboutMePageFrontmatter} from "../src/extended-theme/custom-pages/aboutMe";
 import SNS from "@theme/SNS.vue";
 
 const themeLocale = useThemeLocaleData();
