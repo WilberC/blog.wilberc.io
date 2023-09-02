@@ -11,7 +11,8 @@ description: Lorem Ipsum is simply dummy text of the printing and typesetting in
   Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
   Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
   Aldus PageMaker including versions of Lorem Ipsum.
-cvLink: https://github.com/WilberC/this_person_doesnt_exist
+cvLink: "/files/cv/Wilber%20Carrascal%20-%20CV.pdf"
+sourceCode: https://github.com/WilberC/blog.wilberc.io
 experience:
   - name: Senior backend developer
     year: 2022-2022

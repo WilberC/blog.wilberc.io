@@ -20,6 +20,7 @@ export interface GungnirThemeAboutMePageFrontmatter
   me: string;
   description: string;
   cvLink?: string;
+  sourceCode?: string;
   image?: string
   experience?: Array<ExperienceItem>;
   miscellaneous?: Array<MiscellaneousItem>
