@@ -44,7 +44,7 @@
     width: 300px;
     margin: -80px 30px 10px 10px;
     float: right;
-    border: 5px solid #161b23;
+    //border: 5px solid #161b23;
     border-radius: 100%;
   }
 
@@ -67,8 +67,6 @@
     width: 85%;
   }
 }
-
-// ------------------------------------------------------------
 
 @media (max-width: 630px) {
   .about-me__wrapper {

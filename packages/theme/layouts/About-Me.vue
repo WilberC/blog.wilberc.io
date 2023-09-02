@@ -15,7 +15,7 @@
         <a
             v-if="frontmatter.cvLink"
             :href="frontmatter.cvLink"
-            style="display:block; margin-top: 20px;"
+            style="margin-top: 20px;"
             target="_blank">
           Curriculum Vitae
         </a>
@@ -29,7 +29,7 @@
           <div class="line-content">
             <p>
             <span>
-              <b>{{ experienceItem.name }}</b><span v-if="experienceItem.company" style="display: inline;">, </span>
+              <b>{{ experienceItem.name }}</b><span v-if="experienceItem.company" style="display: inline;"> at </span>
               <a
                   v-if="experienceItem.company"
                   :href="experienceItem.company.url"

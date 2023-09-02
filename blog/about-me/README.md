@@ -2,7 +2,7 @@
 layout: About-Me
 title: About Me
 me: Wilber Carrascal
-image: /img/thumbnails/thumbnail.jpg
+image: /img/avatar.jpg
 description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
   industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
   scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
@@ -13,23 +13,32 @@ description: Lorem Ipsum is simply dummy text of the printing and typesetting in
   Aldus PageMaker including versions of Lorem Ipsum.
 cvLink: https://github.com/WilberC/this_person_doesnt_exist
 experience:
-  - name: Lorem Ipsum is simply dummy 1
-    year: 1991
-    extras: consectetur, from a Lorem Ipsum passage, and going through
+  - name: Senior backend developer
+    year: 2022-2022
     company:
-      placeName: Google 1
-      url: https://github.com/WilberC/this_person_doesnt_exist
-  - name: Lorem Ipsum is simply dummy 2
-    year: 1992
+      placeName: Crehana
+      url: https://www.crehana.com/
+  - name: Full-Stack Software Engineer
+    year: 2021-2022
     company:
-      placeName: Google 2
-      url: https://github.com/WilberC/this_person_doesnt_exist
-  - name: Lorem Ipsum is simply dummy 3
-    year: 1993
-    extras: consectetur, from a Lorem Ipsum passage, and going through
+      placeName: Rankmi
+      url: https://www.rankmi.com/es/
+  - name: Full-Stack Software Engineer
+    year: 2020-2021
+    company:
+      placeName: Able Co.
+      url: https://able.co/
+  - name: Full-Stack Software Engineer - Freelance
+    year: 2019-2020
+    company:
+      placeName: Top Food
+  - name: Full-Stack Software Engineer
+    year: 2017-2019
+    company:
+      placeName: Elcole
 miscellaneous:
-  - desc: Lorem Ipsum passages, and more recently 1
-  - desc: Lorem Ipsum passages, and more recently 2
-  - desc: Lorem Ipsum passages, and more recently 3
-  - desc: Lorem Ipsum passages, and more recently 4
+  - desc: "🎧 I'm audiophile, currently looking for best affordable 🔊 DAC/AMP combo."
+  - desc: "🏀 I used to play basketball and 🏊 swim sometimes, also I want to learn 🏄surfing.️"
+  - desc: "🕹️ Currently playing in LOL and Valorant."
+  - desc: "👺 As you can notice I like anime and my favorite is One Piece."
 ---
