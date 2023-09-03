@@ -2,7 +2,7 @@
 @import 'node_modules/vuepress-theme-gungnir/lib/client/styles/_mixins';
 
 .about-me__wrapper {
-  padding: 70px 50px;
+  padding: 5rem 1rem;
   width: 60%;
   max-width: 745px;
   margin: 0 auto;
@@ -61,6 +61,10 @@
   margin-top: 20px;
 }
 
+.line-content__year {
+  text-align: right;
+  min-width: 90px;
+}
 
 @media (max-width: $MQLarge) {
   .about-me__wrapper {
@@ -76,7 +80,7 @@
 
 @media (max-width: 630px) {
   .about-me__wrapper {
-    width: 100%;
+    width: auto;
   }
 
   .about-me__description {

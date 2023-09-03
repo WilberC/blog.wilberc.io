@@ -35,16 +35,16 @@
         >
           <div class="line-content">
             <p>
-            <span>
-              <b>{{ experienceItem.name }}</b><span v-if="experienceItem.company" style="display: inline;"> at </span>
-              <a
-                  v-if="experienceItem.company"
-                  :href="experienceItem.company.url"
-                  target="_blank">
-                {{ experienceItem.company.placeName }}
-              </a>
-            </span>
-              <span>{{ experienceItem.year }}</span>
+              <span>
+                <b>{{ experienceItem.name }}</b><span v-if="experienceItem.company" style="display: inline;"> at </span>
+                <a
+                    v-if="experienceItem.company"
+                    :href="experienceItem.company.url"
+                    target="_blank">
+                  {{ experienceItem.company.placeName }}
+                </a>
+              </span>
+              <span class="line-content__year">{{ experienceItem.year }}</span>
             </p>
             <span v-if="experienceItem.extras" class="line-content__description">{{ experienceItem.extras }}</span>
           </div>
