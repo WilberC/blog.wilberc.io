@@ -1,5 +1,6 @@
 import { defineClientConfig } from "@vuepress/client";
 import { addIcons } from "oh-vue-icons";
+import "./styles/_links.scss"
 import {
   FaTag,
   FaFortAwesome,
