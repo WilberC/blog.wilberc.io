@@ -3,14 +3,14 @@ layout: About-Me
 title: About Me
 me: Wilber Carrascal
 image: /img/avatar.jpg
-description: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-  industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-  scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-  electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-  Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-  Aldus PageMaker including versions of Lorem Ipsum.
+description: "Hey there, tech enthusiasts and fellow learners! 👋 I'm Wilber, and this is my cozy corner of the internet
+  where I spill the beans on all things tech and my exciting journey through the digital universe.
+  So, who am I, you ask? Well, I'm a full stack developer (more focused at backend) 👨‍💻 with passion for creating web
+  magic 🧙‍♂️. I've dabbled in everything from Django and RoR to the coolness of React JS or new technologies that caught
+  my attention. You name it, I've probably built something with it.
+  So, if I have to resume my blog I would say that My blog is your passport to the tech wonderland 🚀✨, where we 
+  connect the dots and discover new tech gems. Join me on this thrilling journey of innovation, quality, and endless 
+  curiosity. Let's dive into the tech world together! 💻🌟"
 cvLink: "/files/cv/Wilber%20Carrascal%20-%20CV.pdf"
 sourceCode: https://github.com/WilberC/blog.wilberc.io
 experience:
