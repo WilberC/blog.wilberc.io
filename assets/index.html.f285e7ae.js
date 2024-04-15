@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-d7df0982","path":"/tags/apim/","title":"apim | Tags","lang":"en-US","frontmatter":{"title":"apim | Tags","layout":"Tags","blog":{"type":"category","name":"apim","key":"tag"}},"excerpt":"","headers":[],"git":{},"filePathRelative":null}');export{a as data};
